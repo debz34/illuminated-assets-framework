@@ -1,0 +1,23 @@
+[project]
+name = "asset"
+authors = []
+description = ""
+telemetry = true
+requirements = []
+cache_dir = "/home/runner/workspace/asset/./.requirements"
+boot_contracts = ["pox", "costs-v2", "bns"]
+[contracts.illuminated-assets-framework]
+path = "contracts/illuminated-assets-framework.clar"
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
